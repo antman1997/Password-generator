@@ -1,0 +1,80 @@
+body {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:monospace ;
+}
+
+.container {
+  background-color: rgba(255, 38, 0, 0.568);
+  padding: 3rem;
+  border-radius: 2rem;
+  border: 2px solid white;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 1rem;
+  column-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+}
+.num-input {
+  width: 2rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+}
+
+.pass-display {
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+  height: 2rem;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: break-all;
+}
+
+.btn {
+  border-radius: 2rem;
+  border: 2px solid white;
+  grid-column: span 2;
+  background-color: transparent;
+  color: white;
+  padding: .5rem 1rem;
+  font-weight: bold;
+  cursor:pointer;
+}
+
+.btn:hover {
+  background-color: #ffffff33;
+}
+
+label {
+  font-weight: bold;
+}
+
+.character-amount-container {
+display: flex;
+align-items: center;
+}
