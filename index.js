@@ -1,18 +1,18 @@
-const characterAmountRange = document.getElementById('characterAmountRange');
-const characterAmountNumber = document.getElementById('characterAmountNumber');
+const characterAmountRange = document.getElementById('characterAmountRange')
+const characterAmountNumber = document.getElementById('characterAmountNumber')
 
 const includeUppercaseElement = document.getElementById('uppercase')
 const includeSymbolsElement = document.getElementById('symbols')
 const includeNumbersElement = document.getElementById('Numbers')
 const passwordDisplay =document.getElementById('passwordDisplay')
 
-const form = document.getElementById('pass-gen')
+const form = document.getElementById('passGen')
 
-characterAmountNumber.addEventListener('input', syncCharacterAmount);
-characterAmountRange.addEventListener('input', syncCharacterAmount);
+characterAmountNumber.addEventListener('input', syncCharacterAmount)
+characterAmountRange.addEventListener('input', syncCharacterAmount)
 
 const UPPERCASE_CHAR_CODES = arrayFromLowToHigh(65,90)
-const LOWERCASE_CHAR_CODES = arrayfromLowToHigh(97, 122)
+const LOWERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122)
 const NUMBER_CHAR_CODES = arrayFromLowToHigh(48, 57)
 const SYMBOL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(
   arrayFromLowToHigh(58,64)
@@ -40,7 +40,7 @@ function generatePassword(characterAmount, includeUppercase, includeNumbers, inc
   if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CHAR_CODES)
 
   const passwordCharacters = []
-  for (let i = 0; i < characterAmount, i++) {
+  for (let i = 0; i < characterAmount; i++) {
     const characterCode = charCodes[Math.floor(Math.random() * characterAmount)]
     passwordCharacters.push(String.fromCharCode(characterCode))
   }
@@ -59,4 +59,4 @@ function syncCharacterAmount(e) {
   const value = e.target.value
   characterAmountNumber.value = value
   characterAmountRange.value = value
-} ;
+}
