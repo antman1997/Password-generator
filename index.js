@@ -11,15 +11,15 @@ const form = document.getElementById('pass-gen')
 characterAmountNumber.addEventListener('input', syncCharacterAmount);
 characterAmountRange.addEventListener('input', syncCharacterAmount);
 
-const UPPERCASE_CHAR_CODES = arrayfromLowToHigh(65,90)
+const UPPERCASE_CHAR_CODES = arrayFromLowToHigh(65,90)
 const LOWERCASE_CHAR_CODES = arrayfromLowToHigh(97, 122)
-const NUMBER_CHAR_CODES = arrayfromLowToHigh(48, 57)
-const SYMBOL_CHAR_CODES = arrayfromLowToHigh(33, 47).concat(
-  arrayfromLowToHigh(58,64)
+const NUMBER_CHAR_CODES = arrayFromLowToHigh(48, 57)
+const SYMBOL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(
+  arrayFromLowToHigh(58,64)
 ).concat(
-  arrayfromLowToHigh(91,96)
+  arrayFromLowToHigh(91,96)
 ).concat(
-  arrayfromLowToHigh(123,126)
+  arrayFromLowToHigh(123,126)
 )
 
 form.addEventListener('submit', e =>{
@@ -47,7 +47,7 @@ function generatePassword(characterAmount, includeUppercase, includeNumbers, inc
   return passwordCharacters.join('')
 }
 
-function arrayfromLowToHigh(low, high) {
+function arrayFromLowToHigh(low, high) {
   const array = []
   for (let i = low; i<= high; i++){
     array.push(i)
